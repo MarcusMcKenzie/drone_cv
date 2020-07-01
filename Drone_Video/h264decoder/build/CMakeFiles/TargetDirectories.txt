@@ -1,0 +1,7 @@
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/install/strip.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/install/local.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/install.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/list_install_components.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/rebuild_cache.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/edit_cache.dir
+/home/marcus/Documents/Projects/Tello-Python-master/Drone_Video/h264decoder/build/CMakeFiles/h264decoder.dir
