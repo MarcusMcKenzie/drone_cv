@@ -1,11 +1,11 @@
-import tello
-from tello_control_ui import TelloUI
+import drone
+from drone_control_ui import TelloUI
 
 
 def main():
 
-    drone = tello.Tello('', 8889)  
-    vplayer = TelloUI(drone,"./img/")
+    tello = drone.Tello('', 8889)  
+    vplayer = TelloUI(tello,"./img/")
     
 	# start the Tkinter mainloop
     vplayer.root.mainloop() 

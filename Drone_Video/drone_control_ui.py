@@ -12,7 +12,7 @@ import platform
 class TelloUI:
     """Wrapper class to enable the GUI."""
 
-    def __init__(self,tello,outputpath):
+    def __init__(self,drone,outputpath):
         """
         Initial all the element of the GUI,support by Tkinter
 
@@ -22,14 +22,14 @@ class TelloUI:
             RuntimeError: If the Tello rejects the attempt to enter command mode.
         """        
 
-        self.tello = tello # videostream device
+        self.tello = drone # videostream device
         self.outputPath = outputpath # the path that save pictures created by clicking the takeSnapshot button 
         self.frame = None  # frame read from h264decoder and used for pose recognition 
         self.thread = None # thread of the Tkinter mainloop
         self.stopEvent = None  
         
         # control variables
-        self.distance = 0.1  # default distance for 'move' cmd
+        self.distance = 0.2  # default distance for 'move' cmd
         self.degree = 30  # default degree for 'cw' or 'ccw' cmd
 
         # if the flag is TRUE,the auto-takeoff thread will stop waiting for the response from tello
