@@ -1,2 +1,2 @@
 # drone_cv
-Object Detection and Tracking with Quadrocopter
+Object Detection, Tracking & Following with Quadrocopter
