@@ -45,6 +45,6 @@
             - **[key-d]** rotate clockwise by 30 degree
         
     - Turn on **Pose Recognition** mode. 
-          - Figure based on user will appear on the screen. Raise arms UP or FLAT ( "Y" or "T" ) to move drone forward 0.5 meters. 
-          - Raise both your arm DOWN ( '/|\' ), to move drone back 0.5 meters. 
-          - Raise your arms so that they are bending in a V-shape( 'v|v' ),to make drone land.
+          * Figure based on user will appear on the screen. Raise arms UP or FLAT ( "Y" or "T" ) to move drone forward 0.5 meters. 
+          * Raise both your arm DOWN ( '/|\' ), to move drone back 0.5 meters. 
+          * Raise your arms so that they are bending in a V-shape( 'v|v' ),to make drone land.
