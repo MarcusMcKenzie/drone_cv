@@ -2,7 +2,6 @@
 
  Receives video stream from drone camera and performs pose recognition processing through PC
  
- .
 ## Prerequisites
 
 - Python2.7
