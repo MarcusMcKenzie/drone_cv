@@ -1,7 +1,6 @@
 # Drone_Video
 Allows drone to receive video stream from drone camera, decodes the video stream and displays the image in the GUI.
 
-<br>
 
 ## Prerequisites
 
