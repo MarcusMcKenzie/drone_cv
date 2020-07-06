@@ -17,7 +17,7 @@ Allows drone to receive video stream from drone camera, decodes the video stream
     - <https://github.com/DaWelter/h264decoder>
     
     
-## Using the program
+## Run the program
 - **Step1**. Turn on drone and connect computer to drone wifi.
 
 
