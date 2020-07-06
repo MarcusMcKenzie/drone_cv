@@ -2,8 +2,6 @@
 
 ## Instructions 
 
-<br>
-
 ### Step1
 Write the command set to be run in command.txt. For example：
 ```
