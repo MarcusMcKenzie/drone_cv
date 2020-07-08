@@ -1,4 +1,4 @@
-import tello
+import drone
 import cv2
 import time
 
@@ -8,12 +8,14 @@ height = 240
 startCounter = 1   #  0 FOR FLIGHT 1 FOR TESTING
 
 
-robot = tello.Tello()
+robot = drone.Tello()
+
+
 
 print("address: ", robot.get_current_state())
 print("me: ", robot.address)
 
-
+#robot.connect()
 robot.send_control_command("command")
 
 robot.move_for = 0
@@ -24,7 +26,7 @@ robot.move_up = 0
 robot.move_down = 0
 robot.set_speed = 0
  
-print(robot.get_battery())
+#print(robot.get_battery())
 
 
 robot.streamoff()

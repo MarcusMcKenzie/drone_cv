@@ -1,18 +1,25 @@
 import drone
 import cv2
 import numpy as np
- 
+import sys
+from datetime import datetime
+import time
+
+start_time = str(datetime.now())
  
 
 width = 640  
 height = 480  
 deadZone = 100
 
-startCounter = 1
+startCounter = 1  #0 FOR FLIGHT 1 FOR TESTING
  
 
 robot = drone.Tello()
-robot.connect()
+
+#robot.connect()
+robot.send_control_command("command")
+
 robot.for_back_velocity = 0
 robot.left_right_velocity = 0
 robot.up_down_velocity = 0
@@ -136,7 +143,7 @@ def display(img):
  
 while True:
  
-    
+    time = str(datetime.now())
     frame_read = robot.get_frame_read()
     myFrame = frame_read.frame
     img = cv2.resize(myFrame, (width, height))
@@ -191,9 +198,20 @@ while True:
  
     stack = stackImages(0.9, ([img, result], [imgDil, imgContour]))
     cv2.imshow('Horizontal Stacking', stack)
- 
+    
+    print("TIME:", time)
+
+    filename = 'images/' + time + '.jpg'
+    #files = time + '.jpg'
+
+    print("FILENAME: ", filename)
+    cv2.imwrite(filename, stack)
+    
+    #cv2.imwrite(files, stack)
+    #out = cv2.VideoWriter(filename, get_video_type(filename), 25, (frameWidth, frameHeight))
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        ro.land()
+        robot.land()
         break
  
 # cap.release()
