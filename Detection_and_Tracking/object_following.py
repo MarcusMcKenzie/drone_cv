@@ -12,7 +12,7 @@ width = 640
 height = 480  
 deadZone = 100
 
-startCounter = 1  #0 FOR FLIGHT 1 FOR TESTING
+startCounter = 0 #0 FOR FLIGHT 1 FOR TESTING
  
 
 robot = drone.Tello()
@@ -49,9 +49,9 @@ def empty(a):
  
 cv2.namedWindow("HSV")
 cv2.resizeWindow("HSV",640,240)
-cv2.createTrackbar("HUE Min","HSV",20,179,empty)
-cv2.createTrackbar("HUE Max","HSV",40,179,empty)
-cv2.createTrackbar("SAT Min","HSV",148,255,empty)
+cv2.createTrackbar("HUE Min","HSV",19,179,empty)
+cv2.createTrackbar("HUE Max","HSV",35,179,empty)
+cv2.createTrackbar("SAT Min","HSV",150,255,empty)
 cv2.createTrackbar("SAT Max","HSV",255,255,empty)
 cv2.createTrackbar("VALUE Min","HSV",89,255,empty)
 cv2.createTrackbar("VALUE Max","HSV",255,255,empty)
@@ -176,20 +176,28 @@ while True:
  
     
     if startCounter == 0:
-       me.takeoff()
-       startCounter = 1
+        robot.takeoff()
+        startCounter = 1
  
  
     if dir == 1:
-       robot.yaw_velocity = -60
+        #robot.left = -60
+        #self.send_control_command(left + ' ' + str(20))
+        robot.move("left", 30)
+        print("LEFT")
     elif dir == 2:
-       robot.yaw_velocity = 60
+        #robot.yaw_velocity = 60
+        #self.send_control_command(right + ' ' + str(20))
+        robot.move("right", 30)  
+        print("RIGHT")
     elif dir == 3:
-       robot.up_down_velocity= 60
+        robot.up_down_velocity= 60
+        print("UP")
     elif dir == 4:
-       robot.up_down_velocity= -60
+        robot.up_down_velocity= -60
+        print("DOWN")
     else:
-       robot.left_right_velocity = 0; robot.for_back_velocity = 0;robot.up_down_velocity = 0; robot.yaw_velocity = 0
+        robot.left_right_velocity = 0; robot.for_back_velocity = 0;robot.up_down_velocity = 0; robot.yaw_velocity = 0
    
    # SEND VELOCITY VALUES TO TELLO
     if robot.send_rc_control:
@@ -199,12 +207,12 @@ while True:
     stack = stackImages(0.9, ([img, result], [imgDil, imgContour]))
     cv2.imshow('Horizontal Stacking', stack)
     
-    print("TIME:", time)
+    #print("TIME:", time)
 
     filename = 'images/' + time + '.jpg'
     #files = time + '.jpg'
 
-    print("FILENAME: ", filename)
+    #print("FILENAME: ", filename)
     cv2.imwrite(filename, stack)
     
     #cv2.imwrite(files, stack)
