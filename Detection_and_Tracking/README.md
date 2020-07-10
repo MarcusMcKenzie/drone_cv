@@ -34,6 +34,6 @@ Allows drone to detect an object in a frame, track that object througout frames 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/go_up.jpg" alt="final" width="400"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/go_down.jpg" alt="final" width="400"/>
 
 
-[Drone POV Video](images/result.mp4)
+[Drone POV Video](https://drive.google.com/file/d/1yWAgYMeQA_HYi2-YDEt4L-ab3gTCWHFK/view?usp=sharing)
 
 [3rd person POV Video](3POV.mp4)
