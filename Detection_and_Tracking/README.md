@@ -35,6 +35,6 @@ Allows drone to detect an object in a frame, track that object througout frames 
 <img src="images/go_up.jpg" alt="final" width="400"/> <img src="images/go_down.jpg" alt="final" width="400"/>
 
 
-[Drone POV]("images/result.mp4)
+[Drone POV Video]("images/result.mp4)
 
-[3rd person POV](result2.mp4)
+[3rd person POV Video](3POV.mp4)
