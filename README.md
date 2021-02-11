@@ -14,4 +14,4 @@ Receive video stream data from the drone, decode the video through the h264 deco
 Uses the decoded video data，and extracts frame images to determine the posture of the user, using OpenPose, and uses these poses to control the actions of the drone.
 
 * **Detection_and_Tracking** <br>
-Uses OpenCV to detect and track an object within the drone's camera frame. Based on the location of the object in the frame, the drone will move perpendicular to the object, so that the object is in the center of the frame. 
+Uses OpenCV to detect and track an object within the drone's camera frame. Based on the location of the object in the frame, the drone will move perpendicular to the object, so that the object is in the center of the image frame. 
